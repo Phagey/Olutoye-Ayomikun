@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Module 1
+# #
 
-# #### In this assignment, you will work with ufo sightings data.
+# #### In this project, I will work with ufo sightings data.
 # - The data includes various data points about individual ufo sightings
 # - Data File(s): ufo-sightings.csv
 
@@ -24,7 +24,7 @@ from nose.tools import assert_equal
 
 
 '''
-1. Import the csv module. Load and read the UFO sightings data set, from the ufo-sightings.csv file, 
+1. I will import the csv module. Load and read the UFO sightings data set, from the ufo-sightings.csv file, 
 into a DictReader inside a with statement.  Assume the data file is in the same directory as the code. 
 
 Print the field names of the data set. Iterate over the reader to put the data into a list name "ufosightings".
@@ -64,7 +64,7 @@ print("Success!")
 
 
 '''
-2. How many sightings were there in total?  Put the count in "ufosightings_count" and print the result.
+2. YTo find how many sightings were there in total? I will put the count in "ufosightings_count" and print the result.
 '''
 
 ufosightings_count = len(ufosightings)
@@ -90,9 +90,8 @@ print("Success!")
 
 
 '''
-3. How many sightings were there in the US?  Put the US sightings in "sightings_us" and print.
+3. To find how many sightings were there in the US?  I will put the US sightings in "sightings_us" and print.
 
-Hint: Check for ufo sightings where the country is 'us'.
 
 '''
 
@@ -128,7 +127,7 @@ print("Success!")
 
 
 '''
-4. Let's find the "fireball" sighting(s) that lasted more than ten seconds in US. 
+4. To find the "fireball" sighting(s) that lasted more than ten seconds in US. 
 Print the the datetime and state of each.  Put the data in "fball" and print the result.
 
 Note: Consider only the US sightings stored in "sightings_us".
@@ -178,7 +177,7 @@ print("Success!")
 
 
 '''
-5. Sort the above list by duration. What was the datetime and duration of the longest sighting?  
+5. To sort the above list by duration. What was the datetime and duration of the longest sighting?  
 Put the sorted list in "fballsorted" and print the result.
 
 - Cast the duration in seconds to a float (decimal). 
@@ -216,7 +215,7 @@ print("Success!")
 
 
 '''
-6. What state had the longest lasting "fireball"?   Put the state in "state" and print the result.
+6. To find what state had the longest lasting "fireball"?   Put the state in "state" and print the result.
 
 - Check if the shape is "fireball".
 - Cast the duration in seconds to a float (decimal).
@@ -260,7 +259,7 @@ print("Success!")
 
 '''
 7. Let's assume that any sighting (of any shape) of 0 seconds is insignificant. 
-Write code to filter out these extraneous records and get the shortest sighting overall now.  
+I want to write code to filter out these extraneous records and get the shortest sighting overall now.  
 Put the minimum duration in "min_duration" and print the result.  
 Use ufosightings
 Note: Consider all sightings stored in "ufosightings".
@@ -297,7 +296,7 @@ print("Success!")
 
 
 '''
-8. What are the top 3 shapes sighted, and how many sightings were there for each? 
+8. To find what are the top 3 shapes sighted, and how many sightings were there for each? 
 
 Note: Consider all sightings stored in "ufosightings".
 
