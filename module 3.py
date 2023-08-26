@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## Module 3
+# ## 
 # 
-# #### In this assignment, you will continue working on the movie data from IMDB.
+# #### In this project, I will continue working on the movie data from IMDB.
 # - The data includes movies and ratings from the IMDB website
 # - Data File(s): imdb.xlsx
 # 
@@ -12,7 +12,7 @@
 # - “countries”: contains the country (of origin) names
 # - “directors”: contains the director names
 # 
-# We have loaded the data as "df" for you. Follow the instructions and finish the rest.
+# I have loaded the data as "df" for you. 
 
 # In[74]:
 
@@ -45,18 +45,14 @@ print("Data Loading Finished.")
 # In[3]:
 
 
-""" Q1: 
-Join three Dataframes: df, df_directors, and df_countries with an inner join.
+""" : 
+To join three Dataframes: df, df_directors, and df_countries with an inner join.
 Store the joined DataFrames in df.
 
-Here are the steps:
-1. Merge df with df_countries and assign it df
-2. Merge df with df_directors and assign it to df again
-There might be errors if the merge is not in this order, so please be careful.
 
 """
 
-# your code here
+# my code here
 
 df = df.merge(df_countries, how='inner', left_on='country_id', right_on='id')
 df = df.merge(df_directors, how='inner', left_on='director_id', right_on='id')
@@ -76,11 +72,11 @@ print("Success!")
 # In[6]:
 
 
-""" Q2: 
-Save the first ten rows of movie titles in a variable called first10, then print it
+""": 
+To save the first ten rows of movie titles in a variable called first10, then print it
 """
 
-# your code here
+# my code here
 
 first10 = df['movie_title'][:10]
 print(first10)
@@ -96,13 +92,13 @@ print("Success!")
 # In[11]:
 
 
-""" Q3: 
+""" : 
 There's an extra character at the end of each movie title. 
-Remove it from the data using str.replace.
+I want to remove it from the data using str.replace.
 And print the first ten rows of movie titles again. 
 """
 
-# your code here
+# my code here
 
 df['movie_title'] = df['movie_title'].str.replace('Ê', '')
 print(df['movie_title'][:10])
@@ -118,12 +114,12 @@ print("Success!")
 # In[14]:
 
 
-""" Q4:
+""" :
 Who is the director with the most movies? First get the number of movies per "director_name", then save the director's name
-and count as a series of length 1 called "director_with_most"
+and counts a series of length 1 called "director_with_most"
 """
 
-# your code here
+# my code here
 
 
 director_counts = df['director_name'].value_counts()
@@ -144,12 +140,12 @@ print("Success!")
 # In[47]:
 
 
-"""Q5:
-Save all of this director's movies and their ratings in a variable called all_movies_ratings, then print this variable.
+"":
+To save all of this director's movies and their ratings in a variable called all_movies_ratings, then print this variable.
 (The director with the most movies you got from the last question.)
 """
 
-# your code here
+# my code here
 
 director_counts = df['director_name'].value_counts()
 
@@ -172,12 +168,12 @@ print("Success!")
 # In[76]:
 
 
-"""Q6:
-Recommend a **random** movie that has a rating of over 8.3. 
+""":
+To recommend a **random** movie that has a rating of over 8.3. 
 Store the random recommendation in a variable called "rand_goodmovie".
 What is the title and imdb_score of your recommendation?
  
-Here are the steps:
+The steps:
 1. Query the data ('df' DataFrame) for movies with a rating over 8.3 (imdb_score > 8.3)
 2. Create a random integer index location to get a single movie recommendation
 3. Save the random movie recommendation in a DataFrame called 'rand_goodmovie'
@@ -189,7 +185,7 @@ Here are the steps:
 import random
 random.seed(0)
 
-# your code here
+# my code here
 
 
 # Step 1: Query the data for movies with a rating over 8.3
