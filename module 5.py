@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## Module 5
+#
 # 
-# In this assignment, you are going to work on Histograms and Scatterplots.
+# In this project, I am going to work on Histograms and Scatterplots.
 # 
-# We have preprocessed the data as "df" for you. 
+# I have preprocessed the data as "df" . 
 # 
-# Follow the instructions and finish the rest part.
+# .
 
 # In[1]:
 
@@ -47,19 +47,17 @@ df
 # In[4]:
 
 
-"""Q1: 
-Is how much a movie makes indicative of how good it is?
-Make a simple scatter plot comparing gross to imdb_score for movies during or after 2000 (title_year >= 2000) and before 2000 (title_year < 2000).
-It may be useful to scale the x axis demarking gross. (Hint: Divide the gross amount by 1,000,000.)
-Remember to put a legend indicating which color corresponds to which years.
-What is your verdict?
+""": 
+To find out if how much a movie makes indicative of how good it is, I will make a simple scatter plot comparing gross to imdb_score for movies during or after 2000 (title_year >= 2000) and before 2000 (title_year < 2000).
+It may be useful to scale the x axis demarking gross.
 
-Save your plot in a variable called plt1, and your dataframes in variables called df_after_2000 and df_before_2000
+What is my verdict?
+
+I will save my plot in a variable called plt1, and my dataframes in variables called df_after_2000 and df_before_2000
 """
 
 import matplotlib.pyplot as plt1
 
-# your code here
 import matplotlib.pyplot as plt1
 # Create dataframes for movies after and before 2000
 df_after_2000 = df[df['title_year'] >= 2000]
@@ -86,7 +84,7 @@ plt1. title('Scatter Plot of Gross vs IMDb Score')
 
 plt1.show()
 
-# Print your verdict
+# Print my verdict
 print("My verdict: There doesn't seem to be a strong correlation between gross and IMDb score.")
 
 sol.df_before_2000.loc[:,'gross'] = (sol.df_before_2000['gross'] / 1000000). astype (int)
@@ -105,16 +103,15 @@ print("Success!")
 # In[6]:
 
 
-"""Q2: 
-Using numpy and pyplot, make an overlapping histogram that shows the score distribution vs. count of R-Rated movies and PG-13 ones.
+""": 
+Using numpy and pyplot, I will make an overlapping histogram that shows the score distribution vs. count of R-Rated movies and PG-13 ones.
 Describe your plot. 
 
-Save your plot in a variable called plt2, and your dataframes in variables called df_R and df_PG13
+I will save my plot in a variable called plt2, and your dataframes in variables called df_R and df_PG13
 """
 
 import matplotlib.pyplot as plt2
 
-# your code here
 
 # Separate R-Rated and PG-13 movies
 df_R = df[df['content_rating'] == 'R']
