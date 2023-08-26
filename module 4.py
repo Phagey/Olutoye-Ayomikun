@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## Module 4
 # 
-# #### In this assignment, you will continue working on the movie data from IMDB.
+# 
+# #### In this project, I will continue working on the movie data from IMDB.
 # - The data includes movies and ratings from the IMDB website
 # - Data File(s): imdb.xlsx
 # 
@@ -12,13 +12,13 @@
 # - “countries”: contains the country (of origin) names
 # - “directors”: contains the director names
 # 
-# We have loaded and joined the data as "df" for you. Follow the instructions and finish the rest part.
+# I have loaded and joined the data as "df".
 
 # In[19]:
 
 
 ###########################################################
-### EXECUTE THIS CELL BEFORE YOU TO TEST YOUR SOLUTIONS ###
+### EXECUTE THIS CELL BEFORE YOU TO TEST MY SOLUTIONS ###
 ###########################################################
 
 import imp, os, sys
@@ -53,12 +53,12 @@ print("Finished.")
 # In[3]:
 
 
-""" Q1: 
-Get the summary statistics for imdb_score and gross, then use the describe() function to summarize this visually. Save the
+""" : 
+Now I will get the summary statistics for imdb_score and gross, then use the describe() function to summarize this visually. I will save the
 result in a variable called score_gross_description and print it.
 """
 
-# your code here
+#
 
 score_gross_description = df[['imdb_score', 'gross']].describe()
 
@@ -75,12 +75,12 @@ print("Success!")
 # In[6]:
 
 
-"""Q2:
-What is the average rating of the director Christopher Nolan's movies? Save this value in a variable called nolan_mean and 
+""":
+To find the average rating of the director Christopher Nolan's movies? Save this value in a variable called nolan_mean and 
 print.
 """
 
-# your code here
+# my code here
 
 
 nolan_movies = df[df['director_name'] == 'Christopher Nolan']
@@ -97,12 +97,12 @@ print("Average rating of Christopher Nolan's movies:", nolan_mean)
 assert_equal(nolan_mean, sol.nolan_mean)
 
 
-# ##### """Q3: 
-# Create a series called 'directors' that contains each director's name and his or her average rating.  Print out the type of your variable.
+# ##### """: 
+# To create a series called 'directors' that contains each director's name and his or her average rating.  Print out the type of your variable.
 # Use the 'directors' series to find the average rating for Steven Spielberg.  Print the value.
 # """
 # 
-# # your code here
+# # my code here
 # 
 # directors = df.groupby('director_name')['imdb_score'].mean()
 # 
@@ -126,20 +126,14 @@ print("Success!")
 # In[13]:
 
 
-"""Q4:
-Select the non-USA movies made after 1960 by Hayao Miyazaki.
+""":
+To select the non-USA movies made after 1960 by Hayao Miyazaki.
 Save the result in a DataFrame called 'miyazaki', then print it.
 
-Here are the steps:
-1. Query the data ('df' DataFrame) based on the following conditions:
-- Non-USA movies (country_id != 1)
-- Movies made after 1960 (title_year > 1960)
-- Movies made by director Hayao Miyazaki (director_id == 46)
-2. Save the filtered data in a DataFrame called 'miyazaki' and print it
 
 """
 
-# your code here
+# my code here
 
 miyazaki = df[(df['country_id'] != 1) & (df['title_year'] > 1960) & (df['director_id'] == 46)]
 
@@ -156,12 +150,12 @@ print("Success!")
 # In[17]:
 
 
-"""Q5: 
-Create a Pivot Table that shows the median rating for each director, grouped by their respective countries. Name your variable
+""": 
+To create a Pivot Table that shows the median rating for each director, grouped by their respective countries. Name your variable
 'pivot_agg'
 """
 
-# your code here
+# my code here
 
 pivot_agg = df.pivot_table(index='country_id', columns='director_id', values='imdb_score', aggfunc='median')
 
@@ -178,12 +172,12 @@ print("Success!")
 # In[20]:
 
 
-"""Q6:
-How long did the movie Gladiator aim to keep your attention? Save the series with this information
+""":
+Tp find out how long the movie Gladiator aim to keep your attention?  I will save the series with this information
 in a variable called 'gladiator_duration', then print it.
 """
 
-# your code here
+# my code here
 
 gladiator_movie = df[df['movie_title'] == 'Gladiator']
 
